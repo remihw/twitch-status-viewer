@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Twitch Status Viewer</title>
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <img id="twitch-logo" src="img/twitch_logo_white.png"/>
+    <div id="menu">
+      <div id="menu-content">
+        <div id="menu-content-left">
+          <button id="btn-filter">All</button>
+          <button id="btn-sort-names">A - Z</button>
+          <button id="btn-update">Update</button>
+        </div>
+        <div id="menu-content-right">
+          <button id="btn-add-user">+</button>
+          <input id="input-add-user" type="text" placeholder="Add user...">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="error-already-added">
+      This user has already been added.<span class="btn-close-error">&times;</span>
+    </div>
+    <div id="error-invalid-name">
+      This is an invalid username.<span class="btn-close-error">&times;</span>
+    </div>
+    <div id="txt-last-update">
+      Last update: <span>0:00</span>
+    </div>
+    <div id="txt-loading-profiles">
+      Loading...
+    </div>
+    <div id="txt-loading-error">
+      Oops, could not connect to the server.
+    </div>
+    <div id="profiles"></div>
+  </main>
+  
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
